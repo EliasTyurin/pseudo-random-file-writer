@@ -24,3 +24,10 @@ Testing file storage and transfer code often requires files with known sizes and
 ## Edge case to be aware of
 
 `writeRandomFile` truncates the target file if it already exists. If you need to append to an existing file or preserve its contents, that is outside the scope of this library.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
