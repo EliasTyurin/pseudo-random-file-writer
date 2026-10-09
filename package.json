@@ -1,6 +1,6 @@
 {
   "name": "pseudo-random-file-writer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generates and writes files filled with pseudorandom bytes of specified size for testing storage and transfer.",
   "type": "module",
   "main": "src/index.js",
